@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6e6e6;
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 2em;
+  gap: 1em;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+.emoji-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.emoji,
+.mixed-emoji {
+  border: 2px solid grey;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  font-size: 6.7em;
+  text-align: center;
+}
+
+.sign {
+  font-size: 6em;
+}
+
+.emoji-inp {
+  display: flex;
+  gap: 7em;
+}
+
+.emoji-inp div em-emoji-picker {
+  height: 320px;
+  min-height: 230px;
+}
+
+@media only screen and (max-width: 850px) {
+  .App {
+    margin: 2px;
+  }
+  .emoji-inp {
+    gap: 1em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .emoji-inp {
+    flex-direction: column;
+    align-items: center;
+  }
+  .emoji-inp div em-emoji-picker {
+    width: 360px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .emoji,
+  .mixed-emoji {
+    height: 100px;
+    width: 100px;
+    font-size: 4em;
+  }
+
+  .sign {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .emoji,
+  .mixed-emoji {
+    height: 80px;
+    width: 80px;
+    font-size: 3.5em;
+  }
+  .emoji-inp div em-emoji-picker {
+    width: 312px;
+  }
+}
